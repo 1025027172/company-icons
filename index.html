@@ -1,0 +1,47 @@
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>公司Icon图标下载</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>公司Icon图标下载</h1>
+    
+    <ul id="iconList">
+        <!-- 这里是图标链接列表，可以通过JavaScript动态生成 -->
+    </ul>
+
+    <script>
+        const icons = {
+            "icon1.png": "https://raw.githubusercontent.com/your-username/company-icons/main/icon1.png",
+            "icon2.png": "https://raw.githubusercontent.com/your-username/company-icons/main/icon2.png"
+            // 添加更多图标文件名和对应链接
+        };
+
+        const iconList = document.getElementById("iconList");
+
+        for (const [icon, link] of Object.entries(icons)) {
+            const listItem = document.createElement("li");
+            const downloadLink = document.createElement("a");
+            downloadLink.href = link;
+            downloadLink.textContent = icon;
+            listItem.appendChild(downloadLink);
+            iconList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
